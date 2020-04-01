@@ -33,28 +33,19 @@ from .models import uk
 def home():
     return render_template("index.html")
 
-@app.route("/map")
-def map():
-    return render_template("map.html")
-
 
 
 # Query the database and send the jsonified results
-//usa 
-@app.route("/send", methods=["GET"])
-def send():
-    if request.method == "GET":
-        
-        usa_data = usa(time=time, open=open, high=high,low=low, last=last, change=change, volume=volume, cases=cases,deaths=deaths,geoid=geoid)
-        db.session.add(usa_data)
-        db.session.commit()
-        return redirect("/", code=302)
 
-    return render_template("index.html")    
+@app.route("/usa", methods=["GET"])
+
+def usa():
+    return jsonify({'usa': usa.query.get()})
+  
 
 @app.route("/api/usacovid")
 def usacovid():
-    results = db.session.query(usa_data.time, usa_data.open, usa_data.high,usa_data.low, usa_data.last, usa_data.change, usa_data.volume, usa_data.cases,usa_data.deaths,usa_data.geoid).all()
+    results = db.session.query(usa.time, usa.open, usa.high,usa.low, usa.last, usa.change, usa.volume, usa.cases,usa.deaths,usa.geoid).all()
 
     time = [result[0] for result in results]
     open = [result[1] for result in results]
@@ -84,23 +75,17 @@ def usacovid():
 
     return jsonify(usa_dataset)
 
-//korean
+
 
 # Query the database and send the jsonified results
-@app.route("/send", methods=["GET"])
-def send():
-    if request.method == "GET":
-        
-        kr_data = kr(time=time, open=open, high=high,low=low, last=last, change=change, volume=volume, cases=cases,deaths=deaths,geoid=geoid)
-        db.session.add(kr_data)
-        db.session.commit()
-        return redirect("/", code=302)
+@app.route("/kr", methods=["GET"])
 
-    return render_template("index.html") 
+def kr():
+    return jsonify({'kr': kr.query.get()})
 
 @app.route("/api/krcovid")
 def krcovid():
-    results = db.session.query(kr_data.time, kr_data.open, kr_data.high,kr_data.low, kr_data.last, kr_data.change, kr_data.volume, kr_data.cases,kr_data.deaths,kr_data.geoid).all()
+    results = db.session.query(kr.time, kr.open, kr.high,kr.low, kr.last, kr.change, kr.volume, kr.cases,kr.deaths,kr.geoid).all()
 
     time = [result[0] for result in results]
     open = [result[1] for result in results]
@@ -130,23 +115,18 @@ def krcovid():
 
     return jsonify(kr_dataset)
 
-//uk
+
 
 # Query the database and send the jsonified results
-@app.route("/send", methods=["GET"])
-def send():
-    if request.method == "GET":
-        
-        uk_data = uk(time=time, open=open, high=high,low=low, last=last, change=change, volume=volume, cases=cases,deaths=deaths,geoid=geoid)
-        db.session.add(uk_data)
-        db.session.commit()
-        return redirect("/", code=302)
+@app.route("/uk", methods=["GET"])
 
-    return render_template("index.html") 
+def uk():
+    return jsonify({'uk': uk.query.get()})
+
 
 @app.route("/api/ukcovid")
 def ukcovid():
-    results = db.session.query(uk_data.time, uk_data.open, uk_data.high,uk_data.low, uk_data.last, uk_data.change, uk_data.volume, uk_data.cases,uk_data.deaths,uk_data.geoid).all()
+    results = db.session.query(uk.time, uk.open, uk.high,uk.low, uk.last, uk.change, uk.volume, uk.cases,uk.deaths,uk.geoid).all()
 
     time = [result[0] for result in results]
     open = [result[1] for result in results]

@@ -14,6 +14,9 @@ class usa(db.Model):
     deaths = db.Column(db.Integer)
     geoid = db.Column(db.Float)
 
+def __repr__(self):
+        return '<usa %r>' % (self.name)
+
 class kr(db.Model):
     __tablename__ = 'korean'
     time = db.Column(db.String(64), primary_key=True)
@@ -26,6 +29,9 @@ class kr(db.Model):
     cases = db.Column(db.Integer)
     deaths = db.Column(db.Integer)
     geoid = db.Column(db.Float)
+
+def __repr__(self):
+        return '<kr %r>' % (self.name)
 
 class uk(db.Model):
     __tablename__ = 'uk'
@@ -40,6 +46,6 @@ class uk(db.Model):
     deaths = db.Column(db.Integer)
     geoid = db.Column(db.Float)
 
-    def __repr__(self):
-        return '<usa %r>' % (self.name)
+def __repr__(self):
+    return '<uk %r>' % (self.name)
 

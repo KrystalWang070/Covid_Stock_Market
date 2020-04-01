@@ -5,8 +5,8 @@ function buildPlot() {
   let Plotly;
 
     /* data route */
-  const url = "/api/usacovid";
-  d3.json(url).then(function(buf){ 
+  const url1 = "/api/usacovid";
+  d3.json(url1).then(function(buf){ 
   var x_time = [], y_priceClose = [], y_covidUS = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
@@ -47,8 +47,8 @@ buildPlot();
 
 
 // Korea plot
-  const url = "/api/krcovid";
-  d3.json(url).then(function(buf){ 
+  const url2 = "/api/krcovid";
+  d3.json(url2).then(function(buf){ 
   var x_time1 = [], y_priceClose1 = [], y_covidKorea = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
@@ -85,8 +85,8 @@ buildPlot();
 
 
 // UK plot
-    const url = "/api/ukcovid";
-    d3.json(url).then(function(buf){ 
+    const url3 = "/api/ukcovid";
+    d3.json(url3).then(function(buf){ 
     var x_time2 = [], y_priceClose2 = [], y_covidUK = [];
     for (var i = 0; i < buf.length; i++) {
       row = buf[i];
