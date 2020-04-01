@@ -25,6 +25,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from .models import usa
+from .models import kr
+from .models import uk
 
 # create route that renders index.html template
 @app.route("/")
