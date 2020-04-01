@@ -5,7 +5,7 @@ function buildPlot() {
   let Plotly;
 
     /* data route */
-  const url = "/api/pals";
+  const url = "/api/usacovid";
   d3.json(url).then(function(buf){ 
   var x_time = [], y_priceClose = [], y_covidUS = [];
   for (var i = 0; i < buf.length; i++) {
