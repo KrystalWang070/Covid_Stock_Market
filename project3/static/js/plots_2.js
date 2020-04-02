@@ -24,8 +24,6 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
   };
   var data = [traceDow, traceCovidUS];
   var layout = {
-    width: 600,
-    height: 300,
     yaxis: {
        tickformat: '.0', 
     xaxis: { title: "X-Axis" },
@@ -66,8 +64,6 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
 
   var data = [traceKOSPI, traceCovidKorea];
   var layout = {
-    width: 600,
-      height: 300,
     yaxis: {
        tickformat: '.0', 
     xaxis: { title: "X-Axis" },
@@ -107,8 +103,6 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
     };
     var data = [traceFTSE, traceCovidUK];
     var layout = {
-      width: 600,
-      height: 300,
       yaxis: {
          tickformat: '.0', 
       xaxis: { title: "X-Axis" },
@@ -126,11 +120,12 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
 
 // Global Covid-19
 Plotly.d3.csv("../static/csv/COVID-19-global.csv", function(buf){ 
-  var x_date = [], y_cases = [];
+  var x_date = [], y_cases = [], y_deaths = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
     x_date.push( row['dateRep'] );
     y_cases.push( row['cases'] );
+    y_deaths.push( row['deaths'] );
   }
   var traceCovid = {
     x: x_date,
@@ -138,14 +133,18 @@ Plotly.d3.csv("../static/csv/COVID-19-global.csv", function(buf){
     type: 'bar',
     name: 'Covid-19 Cases'
   };
+  var traceDeath = {
+    x: x_date,
+    y: y_deaths,
+    type: 'bar',
+    name: 'Covid-19 Cases'
+  };
 
-  var data = [traceCovid];
+  var data = [traceCovid], traceDeath;
   var layout = {
-    width: 600,
-    height: 300,
     yaxis: {
        tickformat: '.0', 
-    title: "Global Daily Cases",
+    title: "Global Daily Cases & Deaths",
     xaxis: { title: "X-Axis" },
     yaxis: { title: "Y-Axis"}
     }
