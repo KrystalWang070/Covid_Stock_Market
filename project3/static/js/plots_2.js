@@ -11,7 +11,11 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
   var traceDow = {
     x: x_time,
     y: y_priceClose,
-    mode: 'lines+markers',
+    mode: 'lines',
+    line: {
+      dash: 'dashdot',
+      width: 4
+    },
     type: 'scatter',
     name: 'Dow Jones Close Price'
   };
@@ -20,7 +24,11 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
     y: y_covidUS,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'COVID-19 Reported Cases'
+    name: 'COVID-19 Reported Cases',
+    marker: {
+      color: 'rgb(219, 64, 82)',
+      size: 12
+    }
   };
   var data = [traceDow, traceCovidUS];
   var layout = {
@@ -50,7 +58,11 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
   var traceKOSPI = {
     x: x_time1,
     y: y_priceClose1,
-    mode: 'lines+markers',
+    mode: 'lines',
+    line: {
+      dash: 'dashdot',
+      width: 4
+    },
     type: 'scatter',
     name: 'KOSPI Close Price'
   };
@@ -59,7 +71,11 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
     y: y_covidKorea,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'COVID-19 Reported Cases'
+    name: 'COVID-19 Reported Cases',
+    marker: {
+      color: 'rgb(219, 64, 82)',
+      size: 12
+    }
   };
 
   var data = [traceKOSPI, traceCovidKorea];
@@ -89,8 +105,11 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
     }
     var traceFTSE = {
       x: x_time2,
-      y: y_priceClose2,
-      mode: 'lines+markers',
+      y: y_priceClose2,mode: 'lines',
+      line: {
+        dash: 'dashdot',
+        width: 4
+      },
       type: 'scatter',
       name: 'FTSE Close Price'
     };
@@ -99,7 +118,11 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
       y: y_covidUK,
       mode: 'lines+markers',
       type: 'scatter',
-      name: 'COVID-19 Reported Cases'
+      name: 'COVID-19 Reported Cases',
+      marker: {
+        color: 'rgb(219, 64, 82)',
+        size: 12
+      }
     };
     var data = [traceFTSE, traceCovidUK];
     var layout = {
