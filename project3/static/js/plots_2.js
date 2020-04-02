@@ -30,6 +30,12 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
        tickformat: '.0', 
     xaxis: { title: "X-Axis" },
     yaxis: { title: "Y-Axis"}
+    },
+    showlegend: true,
+    legend: {
+      x: 1,
+      xanchor: 'right',
+      y: 1
     }
   };
   Plotly.newPlot('plot-us', data, layout);
@@ -66,6 +72,12 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
        tickformat: '.0', 
     xaxis: { title: "X-Axis" },
     yaxis: { title: "Y-Axis"}
+    },
+    showlegend: true,
+    legend: {
+      x: 1,
+      xanchor: 'right',
+      y: 1
     }
   };
   Plotly.newPlot('plot-kr', data, layout);
@@ -101,6 +113,12 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
          tickformat: '.0', 
       xaxis: { title: "X-Axis" },
       yaxis: { title: "Y-Axis"}
+      },
+      showlegend: true,
+      legend: {
+        x: 1,
+        xanchor: 'right',
+        y: 1
       }
     };
     Plotly.newPlot('plot-uk', data, layout);
