@@ -45,7 +45,7 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
     }
   };
   Plotly.newPlot('plot-usa', data, layout);
-  } );
+});
 // Korea plot
 Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){ 
   var x_time1 = [], y_priceClose1 = [], y_covidKorea = [];
