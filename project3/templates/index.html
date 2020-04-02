@@ -18,7 +18,7 @@
 
     <!-- Plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plots_2.js') }}"></script>
 
     <!-- Leaflet CSS & JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -28,6 +28,11 @@
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
     crossorigin=""></script>
+
+     <!-- Leaflet logic -->
+     <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
+     <!-- API Key -->
+     <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
     
     <!-- Leaflet extra markers -->
     <script src="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}"></script>
@@ -48,45 +53,47 @@
       <div id="sub-header">
         <div class="col-md-12">
           <h2>Project 3: Nate, Alejandra, Andrew, Krystal</h2>
-          <p id="sub_head">Within a couple of months, the coronavirus outbreak has gone from a niche item of global health news to the story of our time. Of course, there are thousands of sub-stories underneath the overwhelming umbrella of COVID-19. We have chosen to focus on the reactions of three major markets to the pandemic. In order to make the most relevant comparisons, we have chosen the financial indices associated with three countries experiencing and responding to the outbreak in divergent ways. We will focus on the Dow Jones Industrial Average (United States of America), the Financial Times Stock Exchange 100 Index (United Kingdom), and the Korea Composite Stock Price Index (South Korea). </p>
+          <p id="body">Within a couple of months, the coronavirus outbreak has gone from a niche item of global health news to the story of our time. Of course, there are thousands of sub-stories underneath the overwhelming umbrella of COVID-19. We have chosen to focus on the reactions of three major markets to the pandemic. In order to make the most relevant comparisons, we have chosen the financial indices associated with three countries experiencing and responding to the outbreak in divergent ways. We will focus on the Dow Jones Industrial Average (United States of America), the Financial Times Stock Exchange 100 Index (United Kingdom), and the Korea Composite Stock Price Index (South Korea). </p>
+        </div>
+      </div>
+       <!-- Leaflet -->
+       <div class="row">
+        <div class="col-md-12">
+          <!-- Leaflet map -->
+          <h5>Covid-19 & Stocks Map</h5>
+          <div id="map"></div>
         </div>
       </div>
       <!--Plotly charts-->
+      <div id="chartRow">  
+        <!-- Plot UK -->
+        <div class="col-md-8">
+          <h5>USA, S. Korea and UK COVID-19 Cases</h5>
+          <div id="plot-global"></div>
+        </div>
+      </div>
       <div id="chartRow">
         <!-- Plot USA -->
-        <div class="col-md-6">
-          <h5>USA Covid-19 cases vs DOW Jones Stock</h5>
+        <div class="col-md-8">
+          <h5>USA Covid-19 cases vs DOW Jones</h5>
           <div id="plot-us"></div>
         </div>
       </div>
       <div id="chartRow">
         <!-- Plot S Korea -->
-        <div class="col-md-6">
-          <h5>South Korea Covid-19 cases vs KOSPI Stock</h5>
+        <div class="col-md-8">
+          <h5>South Korea Covid-19 cases vs KOSPI Index</h5>
           <div id="plot-kr"></div>
         </div>
       </div>
       <div id="chartRow">  
         <!-- Plot UK -->
-        <div class="col-md-6">
-          <h5>UK Covid-19 cases vs FTSE Stock</h5>
+        <div class="col-md-8">
+          <h5>UK Covid-19 cases vs FTSE Index</h5>
           <div id="plot-uk"></div>
         </div>
       </div>
-      <!-- Leaflet -->
-      <div class="row">
-        <div class="col-md-12">
-          <!-- Leaflet map -->
-          <div id="map"></div>
-          <!-- Leaflet logic -->
-          <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
-          <!-- API Key -->
-          <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
-        </div>
-      </div>
-      
-    </div>
-  
+     
     <div id="footer">
       <a href="https://github.com/KrystalWang070/Flask">GitHub</a>
   
