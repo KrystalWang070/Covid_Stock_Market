@@ -24,7 +24,7 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
     y: y_covidUS,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'COVID-19 Reported Cases',
+    name: 'COVID-19 Daily Cases',
     marker: {
       color: 'rgb(219, 64, 82)',
       size: 5
@@ -44,7 +44,7 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
       y: 1
     }
   };
-  Plotly.newPlot('plot-us', data, layout);
+  Plotly.newPlot('plot-usa', data, layout);
   } );
 // Korea plot
 Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){ 
@@ -71,7 +71,7 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
     y: y_covidKorea,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'COVID-19 Reported Cases',
+    name: 'COVID-19 Daily Cases',
     marker: {
       color: 'rgb(219, 64, 82)',
       size: 5
@@ -118,7 +118,7 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
       y: y_covidUK,
       mode: 'lines+markers',
       type: 'scatter',
-      name: 'COVID-19 Reported Cases',
+      name: 'COVID-19 Daily Cases',
       line: {
         size: 3},
       marker: {
