@@ -27,7 +27,7 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
     name: 'COVID-19 Reported Cases',
     marker: {
       color: 'rgb(219, 64, 82)',
-      size: 5
+      size: 3
     }
   };
   var data = [traceDow, traceCovidUS];
@@ -74,7 +74,7 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
     name: 'COVID-19 Reported Cases',
     marker: {
       color: 'rgb(219, 64, 82)',
-      size: 5
+      size: 3
     }
   };
 
@@ -121,7 +121,7 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
       name: 'COVID-19 Reported Cases',
       marker: {
         color: 'rgb(219, 64, 82)',
-        size: 5
+        size: 3
       }
     };
     var data = [traceFTSE, traceCovidUK];
@@ -181,21 +181,21 @@ Plotly.d3.csv("../static/csv/COVID-19-global.csv", function(buf){
     y: y_covidUS,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'KOSPI Close Price'
+    name: 'USA Reported Cases'
   };
   var trace_kr = {
     x: x_time1,
     y: y_covidKorea,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'COVID-19 Reported Cases'
+    name: 'S. Korea Reported Cases'
   };
   var trace_uk = {
     x: x_time2,
     y: y_covidUK,
     mode: 'lines+markers',
     type: 'scatter',
-    name: 'COVID-19 Reported Cases'
+    name: 'UK Reported Cases'
   };
   var data = [trace_kr, trace_usa, trace_uk,];
     var layout = {
