@@ -8,7 +8,7 @@ h1 {
     text-align: center;
 }
 
-sub_head {
+.sub_head {
     color: #111; 
     font-family: 'Helvetica Neue', sans-serif; 
     font-size: 24px;
