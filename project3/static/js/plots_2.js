@@ -28,7 +28,6 @@ Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){
     height: 300,
     yaxis: {
        tickformat: '.0', 
-    title: "USA Covid-19 Cases & DOW Jones Close Price",
     xaxis: { title: "X-Axis" },
     yaxis: { title: "Y-Axis"}
     }
@@ -65,7 +64,6 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
       height: 300,
     yaxis: {
        tickformat: '.0', 
-    title: "South Korea Covid-19 Cases & KOSPI Close Price",
     xaxis: { title: "X-Axis" },
     yaxis: { title: "Y-Axis"}
     }
@@ -101,7 +99,6 @@ Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){
       height: 300,
       yaxis: {
          tickformat: '.0', 
-      title: "United Kingdom Covid-19 Cases & FTSE Close Price",
       xaxis: { title: "X-Axis" },
       yaxis: { title: "Y-Axis"}
       }
