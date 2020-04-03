@@ -37,22 +37,21 @@
     <!-- Leaflet extra markers -->
     <script src="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}">
-    <style>
-      div.ex1 {
-        background-color: lightsteelblue;
-        width: 2000px;
-        height: 900px;
-        overflow: scroll;
-      }
-    </style>
-  
-  
+      
   </head>
   <body>
     <div class="ex1">
       
       <!-- Overall Grid -->
       <div id="body">
+
+        <!-- Map -->
+          <div class="col-md-12">
+            <div style= "height: 375px; width: 1680px;">
+              <div id="map">
+            </div>                
+          </div>
+        
         <!-- Header -->
         <div id="title">
           <div class="col-md-12">

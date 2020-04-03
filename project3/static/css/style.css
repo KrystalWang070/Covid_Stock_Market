@@ -10,6 +10,13 @@ body {
   height: 100vh
 }
 
+div.ex1 {
+  background-color: lightsteelblue;
+  width: 2000px;
+  height: 900px;
+  overflow: scroll;
+}
+
 /* set map, body, and html to 100% of the screen size */
 #map,
 body,
@@ -33,3 +40,9 @@ h1 {
   font-size: 24px;
   text-align: center;
 }
+      div.ex1 {
+        background-color: lightsteelblue;
+        width: 2000px;
+        height: 900px;
+        overflow: scroll;
+      }
