@@ -1,4 +1,4 @@
-from project3.app import db
+from project3.app import 'korea.db'
 
 # db.drop_all()
-db.create_all()
+korea.create_all()
