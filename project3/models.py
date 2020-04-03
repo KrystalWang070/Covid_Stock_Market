@@ -48,4 +48,4 @@ class uk(db.Model):
 
 def __repr__(self):
     return '<uk %r>' % (self.name)
-
+© 2020 GitHub, Inc.
