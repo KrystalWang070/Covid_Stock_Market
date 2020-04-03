@@ -37,7 +37,6 @@
     <!-- Leaflet extra markers -->
     <script src="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}">
-
     <style>
       div.ex1 {
         background-color: lightsteelblue;
@@ -50,101 +49,96 @@
   
   </head>
   <body>
-
     <div class="ex1">
-
-    <!-- scrolling feature -->
-      <div style="height:2000px;width:1000px;border:solid 2px white;overflow:scroll;overflow-x:hidden;overflow-y:scroll;">
-
-        
-        <!-- Overall Grid -->
-        <div id="body">
-          <!-- Header -->
-          <div id="title">
-            <div class="col-md-12">
-              <h1>COVID-19 Spread and Stock Market Performance</h1>
-            </div>
+      
+      <!-- Overall Grid -->
+      <div id="body">
+        <!-- Header -->
+        <div id="title">
+          <div class="col-md-12">
+            <h1>COVID-19 Spread and Stock Market Performance</h1>
           </div>
-          <!-- Sub-header -->
-          <div id="sub-header">
-            <div class="col-md-6">
-              <h3>Project 3: Nate, Alejandra, Andrew, Krystal</h3>
-              <p id="body">Within a couple of months, the coronavirus outbreak has gone from a niche item of global health news to the story of our time. Of course, there are thousands of sub-stories underneath the overwhelming umbrella of COVID-19. </p>
-              <p id="body">We have chosen to focus on the reactions of three major markets to the pandemic. In order to make the most relevant comparisons, we have chosen the financial indices associated with three countries experiencing and responding to the outbreak in divergent ways.  </p>
-              <p id="body">We will focus on the Dow Jones Industrial Average (United States of America), the Financial Times Stock Exchange 100 Index (United Kingdom), and the Korea Composite Stock Price Index (South Korea).</p>
-            </div>
+        </div>
+        <!-- Sub-header -->
+        <div id="sub-header">
+          <div class="col-md-6">
+            <h3>Project 3: Nate, Alejandra, Andrew, Krystal</h3>
+            <p id="body">Within a couple of months, the coronavirus outbreak has gone from a niche item of global health news to the story of our time. Of course, there are thousands of sub-stories underneath the overwhelming umbrella of COVID-19. </p>
+            <p id="body">We have chosen to focus on the reactions of three major markets to the pandemic. In order to make the most relevant comparisons, we have chosen the financial indices associated with three countries experiencing and responding to the outbreak in divergent ways.  </p>
+            <p id="body">We will focus on the Dow Jones Industrial Average (United States of America), the Financial Times Stock Exchange 100 Index (United Kingdom), and the Korea Composite Stock Price Index (South Korea).</p>
           </div>
-          <!-- Leaflet -->
-          <div class="row">
-            <div class="col-md-12">
-              <!-- Leaflet map -->
-              <h5>Covid-19 & Stocks Map</h5>
-              <div id="map"></div>
-            </div>
+        </div>
+        <!-- Leaflet -->
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Leaflet map -->
+            <h5>Covid-19 & Stocks Map</h5>
+            <div id="map"></div>
           </div>
-          <!--Plotly charts-->
-          <div id="chartRow">
-            <!-- Plot USA -->
-            <div class="col-md-8">
-              <h5>United States Covid-19 cases vs DOW Jones</h5>
-              <div id="plot-usa"></div>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-            </div>
+        </div>
+        <!--Plotly charts-->
+        <div id="chartRow">
+          <!-- Plot USA -->
+          <div class="col-md-8">
+            <h5>United States Covid-19 cases vs DOW Jones</h5>
+            <div id="plot-usa"></div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
           </div>
-          <div id="chartRow">
-            <!-- Plot S Korea -->
-            <div class="col-md-8">
-              <h5>South Korea Covid-19 cases vs KOSPI Index</h5>
-              <div id="plot-kr"></div>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-            </div>
+        </div>
+        <div id="chartRow">
+          <!-- Plot S Korea -->
+          <div class="col-md-8">
+            <h5>South Korea Covid-19 cases vs KOSPI Index</h5>
+            <div id="plot-kr"></div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
           </div>
-          <div id="chartRow">  
-            <!-- Plot UK -->
-            <div class="col-md-8">
-              <h5>United Kingdom Covid-19 cases vs FTSE Index</h5>
-              <div id="plot-uk"></div>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-            </div>
+        </div>
+        <div id="chartRow">  
+          <!-- Plot UK -->
+          <div class="col-md-8">
+            <h5>United Kingdom Covid-19 cases vs FTSE Index</h5>
+            <div id="plot-uk"></div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
           </div>
-          <div id="chartRow">  
-            <!-- Plot Global -->
-            <div class="col-md-8">
-              <h5>Global COVID-19 Daily Cases</h5>
-              <div id="plot-covid"></div>
-            </div>
+        </div>
+        <div id="chartRow">  
+          <!-- Plot Global -->
+          <div class="col-md-8">
+            <h5>Global COVID-19 Daily Cases</h5>
+            <div id="plot-covid"></div>
           </div>
-          <div id="body">  
-            <!-- Links to Data Sources -->
-            <div class="col-md-8">
-              <p> Data Sources </p>
-            <div class="col-md-8">
-              <a href="https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases">European Centre for Disease Prevention and Control</a>
-            </div>
-            <div class="col-md-8">  
-              <a href="https://www.sharecast.com/index/Dow_Jones_IA/prices">ShareCast: Dow Jones</a> 
-            </div> 
-              <a href="https://www.sharecast.com/index/FTSE_100/prices">ShareCast: FTSE Index</a>
-            <div class="col-md-8">   
-              <a href="https://www.investing.com/indices/kospi-historical-data">Investing: KOSPI Index</a>
-            </div>
+        </div>
+        <div id="body">  
+          <!-- Links to Data Sources -->
+          <div class="col-md-8">
+            <p> Data Sources </p>
+          <div class="col-md-8">
+            <a href="https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases">European Centre for Disease Prevention and Control</a>
           </div>
-        
-        <div id="footer">
-          <a href="https://github.com/KrystalWang070/Flask">GitHub</a>
+          <div class="col-md-8">  
+            <a href="https://www.sharecast.com/index/Dow_Jones_IA/prices">ShareCast: Dow Jones</a> 
+          </div> 
+            <a href="https://www.sharecast.com/index/FTSE_100/prices">ShareCast: FTSE Index</a>
+          <div class="col-md-8">   
+            <a href="https://www.investing.com/indices/kospi-historical-data">Investing: KOSPI Index</a>
+          </div>
         </div>
       
-        <script>
-          if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
-            window.location.protocol = "https";
-          }
-        </script>    
-      
-          <!-- Optional JavaScript -->
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <div id="footer">
+        <a href="https://github.com/KrystalWang070/Flask">GitHub</a>
+      </div>
+    
+      <script>
+        if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
+          window.location.protocol = "https";
+        }
+      </script>    
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </div>
   </body>
 </html>

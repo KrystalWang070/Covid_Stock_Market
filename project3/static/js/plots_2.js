@@ -1,7 +1,6 @@
 //https://community.plotly.com/t/add-labels-to-time-series-read-from-csv/11586
 // USA plot
-var url1='http://127.0.0.1:5000/api/usa';
-d3.json(url1,function(buf){ 
+Plotly.d3.csv("../static/csv/usa_combined.csv", function(buf){ 
   var x_time = [], y_priceClose = [], y_covidUS = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
@@ -47,11 +46,8 @@ d3.json(url1,function(buf){
   };
   Plotly.newPlot('plot-usa', data, layout);
 });
-
-
 // Korea plot
-var url2='http://127.0.0.1:5000/api/kr';
-d3.json(url2,function(buf){ 
+Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){ 
   var x_time1 = [], y_priceClose1 = [], y_covidKorea = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
@@ -98,11 +94,8 @@ d3.json(url2,function(buf){
   };
   Plotly.newPlot('plot-kr', data, layout);
 });
-
-
 // UK plot
-var url3='http://127.0.0.1:5000/api/uk';
-d3.json(url3,function(buf){ 
+Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){ 
     var x_time2 = [], y_priceClose2 = [], y_covidUK = [];
     for (var i = 0; i < buf.length; i++) {
       row = buf[i];
