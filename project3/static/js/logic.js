@@ -46,21 +46,21 @@ var countries = [
     {
       name: "United States of America",
       location: [37.09, -95.71],
-      cases: 192850,
+      cases: 245540,
       market_name: "Dow Jones",
       loss_last_month: (25917.41 - 20890.41) / 20890.41
     },
     {
       name: "United Kingdom",
       location: [51.5, -0.13],
-      cases: 25897,
+      cases: 33718,
       market_name: "FTSE",
       loss_last_month: (6599 - 5364.5) / 5364.5
     },
     {
       name: "South Korea",
       location: [37.56, 126.98],
-      cases: 6484,
+      cases: 10062,
       market_name: "KOSPI",
       loss_last_month: (2002.51 - 1724.86) / 1724.86
     }
