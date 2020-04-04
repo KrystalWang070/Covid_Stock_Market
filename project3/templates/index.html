@@ -12,45 +12,40 @@
 
     <!-- CSS (Bootstrap and custom) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href='../static/css/style.css'> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
     <script src="https://use.typekit.net/nlq1kdt.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script> 
 
     <!-- Plotly -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src='../static/js/plots_2.js'></script>
+    <script src="{{ url_for('static', filename='js/plots_2.js') }}"></script>
 
     <!-- Leaflet CSS & JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
     integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
     crossorigin=""/>
 
-<!-- Map -->
-      <!-- <div class="col-md-12"> -->
-        <div style= "height: 375px; width: 1680px;">
-          <div id="map">
-        </div>  
-        <div class="row">
-          <div class="col-md-12">
-            <!-- Leaflet map -->
-            <div id="map"></div>
-            <p>The colors of the circles represent financial loss categories. Red indicates losses of over 20% in the last month. Yellow indicates losses between 10-20%. Green indicates losses under 10%. Click on the circles to see more information on the focus countries. </p>
-          </div>
-        </div>
-
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
     crossorigin=""></script>
 
-    <!-- API Key -->
-    <script type="text/javascript" src='../static/js/config.js'></script>
-
-    <!-- Leaflet logic -->
-    <script type="text/javascript" src='../static/js/logic.js'></script>
+     <!-- Leaflet logic -->
+     <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
+     <!-- API Key -->
+     <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
     
     <!-- Leaflet extra markers -->
     <script src="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}"></script>
-    <link rel="stylesheet" href='../static/css/leaflet.extra-markers.min.css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet.extra-markers.min.css') }}">
+
+    <style>
+      div.ex1 {
+        background-color: lightsteelblue;
+        width: 2000px;
+        height: 900px;
+        overflow: scroll;
+      }
+    </style>
       
   </head>
   <body>
@@ -58,6 +53,13 @@
       
       <!-- Overall Grid -->
       <div id="body">
+
+        <!-- Map -->
+          <div class="col-md-12">
+            <div style= "height: 375px; width: 1680px;">
+              <div id="map">
+            </div>                
+          </div>
         
         <!-- Header -->
         <div id="title">
