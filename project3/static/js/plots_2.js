@@ -1,6 +1,6 @@
 //https://community.plotly.com/t/add-labels-to-time-series-read-from-csv/11586
 // USA plot
-Plotly.d3.csv("../static/csv/usa_combined_4-3.csv", function(buf){ 
+Plotly.d3.csv("../static/csv/usa_combined_4_3.csv", function(buf){ 
   var x_time = [], y_priceClose = [], y_covidUS = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
@@ -47,7 +47,7 @@ Plotly.d3.csv("../static/csv/usa_combined_4-3.csv", function(buf){
   Plotly.newPlot('plot-usa', data, layout);
 });
 // Korea plot
-Plotly.d3.csv("../static/csv/korea_combined_4-3.csv", function(buf){ 
+Plotly.d3.csv("../static/csv/korea_combined_4_3.csv", function(buf){ 
   var x_time1 = [], y_priceClose1 = [], y_covidKorea = [];
   for (var i = 0; i < buf.length; i++) {
     row = buf[i];
@@ -95,7 +95,7 @@ Plotly.d3.csv("../static/csv/korea_combined_4-3.csv", function(buf){
   Plotly.newPlot('plot-kr', data, layout);
 });
 // UK plot
-Plotly.d3.csv("../static/csv/uk_combined.csv_4-3", function(buf){ 
+Plotly.d3.csv("../static/csv/uk_combined_4_3.csv", function(buf){ 
     var x_time2 = [], y_priceClose2 = [], y_covidUK = [];
     for (var i = 0; i < buf.length; i++) {
       row = buf[i];
