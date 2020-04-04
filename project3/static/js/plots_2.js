@@ -99,53 +99,56 @@ Plotly.d3.csv("../static/csv/korea_combined.csv", function(buf){
 
 
 // UK plot
+
 Plotly.d3.csv("../static/csv/uk_combined.csv", function(buf){ 
-    var x_time2 = [], y_priceClose2 = [], y_covidUK = [];
-    for (var i = 0; i < buf.length; i++) {
-      row = buf[i];
-      x_time2.push( row['time'] );
-      y_priceClose2.push( row['last'] );
-      y_covidUK.push( row['cases'] );
+  var x_time2 = [], y_priceClose2 = [], y_covidUK = [];
+  for (var i = 0; i < buf.length; i++) {
+    row = buf[i];
+    x_time2.push( row['time'] );
+    y_priceClose2.push( row['last'] );
+    y_covidUK.push( row['cases'] );
+  }
+  var traceFTSE = {
+    x: x_time2,
+    y: y_priceClose2,
+    mode: 'lines',
+    line: {
+      dash: 'dashdot',
+      width: 4
+    },
+    type: 'scatter',
+    name: 'FTSE Close Price'
+  };
+  var traceCovidUK = {
+    x: x_time2,
+    y: y_covidUK,
+    mode: 'lines+markers',
+    type: 'scatter',
+    name: 'COVID-19 Daily Cases',
+    marker: {
+      color: 'rgb(219, 64, 82)',
+      size: 5
     }
-    var traceFTSE = {
-      x: x_time2,
-      y: y_priceClose2,mode: 'lines',
-      line: {
-        dash: 'dashdot',
-        width: 4
-      },
-      type: 'scatter',
-      name: 'FTSE Close Price'
-    };
-    var traceCovidUK = {
-      x: x_time2,
-      y: y_covidUK,
-      mode: 'lines+markers',
-      type: 'scatter',
-      name: 'COVID-19 Daily Cases',
-      line: {
-        size: 3},
-      marker: {
-        color: 'rgb(219, 64, 82)',
-        size: 5
-      }
-    };
-    var data = [traceFTSE, traceCovidUK];
-    var layout = {
-      yaxis: {
-         tickformat: '.0', 
-      xaxis: { title: "X-Axis" },
-      yaxis: { title: "Y-Axis"}
-      },
-      showlegend: true,
-      legend: {
-        x: 1,
-        xanchor: 'right',
-        y: 1
-      }
-    };
-    Plotly.newPlot('plot-uk', data, layout);
+  };
+
+  var data = [traceFTSE, traceCovidUK];
+  var layout = {
+    yaxis: {
+       tickformat: '.0', 
+    xaxis: { title: "X-Axis" },
+    yaxis: { title: "Y-Axis"}
+    },
+    showlegend: true,
+    legend: {
+      x: 1,
+      xanchor: 'right',
+      y: 1
+    }
+  };
+  Plotly.newPlot('plot-uk', data, layout);
 });
+
+
 
 // Global Covid-19
 Plotly.d3.csv("../static/csv/COVID-19-global.csv", function(buf){ 
