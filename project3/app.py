@@ -1,7 +1,5 @@
 # import necessary libraries
 
-# import necessary libraries
-
 import os
 
 from flask import (
@@ -15,11 +13,10 @@ from sqlalchemy import create_engine
 from flask_jsonpify import jsonify
 
 #Create a engine for connecting to SQLite3.
-#Assuming salaries.db is in your app root folder
 
-kr = create_engine('sqlite:///korea.db')
-uk = create_engine('sqlite:///uk.db')
-usa = create_engine('sqlite:///usa.db')
+kr = create_engine('sqlite:///static/db/korea.db')
+uk = create_engine('sqlite:///static/db/uk.db')
+usa = create_engine('sqlite:///static/db/usa.db')
 
 #################################################
 # Flask Setup
