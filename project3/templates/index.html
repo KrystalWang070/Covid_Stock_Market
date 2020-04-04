@@ -4,11 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>COVID-19 Spread and Stock Market Performance</title>
-
-    <!-- Anime.js -->
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 
     <!-- CSS (Bootstrap and custom) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -16,7 +12,14 @@
     <script src="https://use.typekit.net/nlq1kdt.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script> 
 
-    <!-- Plotly -->
+    <!-- JS (Anime.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+    <!-- CSS (Anime.js) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.css'>    
+
+    <!-- JS (Plotly) -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="{{ url_for('static', filename='js/plots_2.js') }}"></script>
 
@@ -30,15 +33,14 @@
     crossorigin=""></script>
 
 
-<!-- Map -->
-      <!-- <div class="col-md-12"> -->
+    <!-- Map -->
         <div style= "height: 375px; width: 1680px;">
           <div id="map">
         </div>  
         <div class="row">
           <div class="col-md-12">
-            <!-- Leaflet map -->
-            <div id="map"></div>
+    <!-- Leaflet map -->
+          <div id="map"></div>
             <p>The colors of the circles represent financial loss categories. Red indicates losses of over 20% in the last month. Yellow indicates losses between 10-20%. Green indicates losses under 10%. Click on the circles to see more information on the focus countries. </p>
           </div>
         </div>
@@ -72,9 +74,7 @@
     <div class="ex1">
       
       <!-- Overall Grid -->
-      <div id="body">
-
-        
+      <div id="body">        
         <!-- Header -->
         <div id="title">
           <div class="col-md-12">
@@ -85,7 +85,7 @@
         <div id="sub-header">
           <div class="col-md-6">
             <h3>Project 3: Nate, Alejandra, Andrew, Krystal</h3>
-            <p id="body">Within a couple of months, the coronavirus outbreak has gone from a niche item of global health news to the story of our time. Of course, there are thousands of sub-stories underneath the overwhelming umbrella of COVID-19. </p>
+            <p id="body">Within a couple of months, the coronavirus outbreak has gone from a niche item of global health news to the story of our time. Of course, there are thousands of sub-stories underneath the overwhelming umbrella of COVID-19.</p>
             <p id="body">We have chosen to focus on the reactions of three major markets to the pandemic. In order to make the most relevant comparisons, we have chosen the financial indices associated with three countries experiencing and responding to the outbreak in divergent ways.  </p>
             <p id="body">We will focus on the Dow Jones Industrial Average (United States of America), the Financial Times Stock Exchange 100 Index (United Kingdom), and the Korea Composite Stock Price Index (South Korea).</p>
           </div>
@@ -150,18 +150,158 @@
       <div id="footer">
         <a href="https://github.com/KrystalWang070/Flask">GitHub</a>
       </div>
-    
+
+    <!-- Start animation -->      
+    <!-- partial:index.partial.html -->
+    <div class="animation-wrapper">
+      <div class="layered-animations">
+
+    <!-- control shape -->
+        <svg class="small shape color-black" viewBox="0 0 1006 1006">
+          <polygon fill-rule="evenodd" points="48 17.28 86.4 80.11584 9.6 80.11584" />
+        </svg>
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>    
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>        
+
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="48" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="18" cy="748" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>
+        <svg class="small shape color-red" viewBox="0 0 296 296">
+          <circle cx="98" cy="48" r="32" fill-rule="evenodd" stroke-linecap="square"/>
+        </svg>    
+      </div>
+    </div>
+
+    <!-- End animation -->
+        
       <script>
         if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
           window.location.protocol = "https";
         }
       </script>    
     
-        <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </div>
+
+    <!-- partial (animation) -->
+    <script src='https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.js'></script>
+<!--    <script src="../static/js/animation.js"></script>-->
+    <script src="{{ url_for('static', filename='js/animation.js') }}"></script>
+
   </body>
 </html>
