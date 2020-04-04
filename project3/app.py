@@ -29,6 +29,22 @@ api = Api(app)
 def home():
     return render_template("index.html")
 
+@app.route("/animation")
+def animation():
+    return render_template("animation.html")
+
+@app.route("/usa")
+def usa():
+    return render_template("usa.html")
+
+ @app.route("/kr")
+def kr():
+    return render_template("kr.html")
+
+ @app.route("/uk")
+def uk():
+    return render_template("uk.html")
+
 #################################################
 # MODEL Setup
 #################################################
