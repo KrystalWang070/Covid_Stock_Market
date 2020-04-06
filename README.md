@@ -20,13 +20,13 @@ The colors of the circles represent financial loss categories. Red indicates los
 ## Charts Comparing Covid-19 Cases and Stock Index Performance by Country
 
 ### United States Covid-19 cases vs DOW Jones
-![covid](https://github.com/KrystalWang070/Flask/us_plot.png)
+![covid](https://github.com/KrystalWang070/Flask/blob/master/us_plot.png)
 
 ### South Korea Covid-19 cases vs KOSPI Index
-![covid](https://github.com/KrystalWang070/Flask/sk_plot.png)
+![covid](https://github.com/KrystalWang070/Flask/blob/master/sk_plot.png)
 
 ### United Kingdom Covid-19 cases vs FTSE Index
-![covid](https://github.com/KrystalWang070/Flask/uk_plot.png)
+![covid](https://github.com/KrystalWang070/Flask/blob/master/uk_plot.png)
 
 ## Observations
 
@@ -37,4 +37,4 @@ Many factors contribute to the fluctuation of the stock market aside from the vo
 While we cannot assign causality, it appears as though South Korea, which took early, aggressive steps to stem the tide of the virus, has suffered substantially lower financial losses compared to the UK & the US. Just last week, the United States passed China & Italy as the country with the most confirmed infections.
 
 ### Global COVID-19 Daily Cases
-![covid](https://github.com/KrystalWang070/Flask/global_plot.png)
+![covid](https://github.com/KrystalWang070/Flask/blob/master/global_plot.png)
