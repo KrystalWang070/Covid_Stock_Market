@@ -41,41 +41,6 @@ def animation():
     # show the form, it wasn't submitted
     return render_template('animation.html')
 
-@app.route('/united', methods=['GET', 'POST'])
-def united():
-    if request.method == 'POST':
-        # do stuff when the form is submitted
-
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
-        return redirect(url_for('index'))
-
-    # show the form, it wasn't submitted
-    return render_template('united.html')
-
-@app.route('/korean', methods=['GET', 'POST'])
-def korean():
-    if request.method == 'POST':
-        # do stuff when the form is submitted
-
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
-        return redirect(url_for('index'))
-
-    # show the form, it wasn't submitted
-    return render_template('korean.html')
-
-@app.route('/kingdom', methods=['GET', 'POST'])
-def kingdom():
-    if request.method == 'POST':
-        # do stuff when the form is submitted
-
-        # redirect to end the POST handling
-        # the redirect can be to the same route or somewhere else
-        return redirect(url_for('index'))
-
-    # show the form, it wasn't submitted
-    return render_template('kingdom.html')
 
 #################################################
 # MODEL Setup
